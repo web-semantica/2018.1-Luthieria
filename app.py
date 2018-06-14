@@ -3,7 +3,7 @@ import os
 from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
-from resources.guitar import Guitar, GuitarList
+from resources.guitar import Guitar, GuitarList, GuitarCreate
 
 app = Flask(__name__)
 CORS(app)
