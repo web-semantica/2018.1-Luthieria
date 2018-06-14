@@ -15,6 +15,7 @@ api = Api(app)
 
 #Guitar entrypoints
 api.add_resource(Guitar, '/guitar/<int:guitar_id>')
+api.add_resource(GuitarCreate, '/createguitar')
 api.add_resource(GuitarList, '/guitars')
 
 if __name__ == '__main__':

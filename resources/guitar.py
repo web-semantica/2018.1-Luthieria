@@ -2,25 +2,19 @@ from flask_restful import Resource, reqparse
 from models.guitar import GuitarModel
 
 class Guitar(Resource):
+    parser = reqparse.RequestParser()
+    
+    parser.add_argument('name',
+        type=str,
+        required=True,
+        help="This field cannot be left blank!"
+    )
 
-    def get(self, name):
-        guitar = GuitarModel.find_by_name(name)
+    def get(self, guitar_id):
+        guitar = GuitarModel.find_by_id(guitar_id)
         if guitar:
             return guitar.json()
         return {'error_message': 'Guitar not found'}, 404
-
-    def post(self, name):
-        if GuitarModel.find_by_name(name):
-            return {'error_message': "A guitar with name '{}' already exists.".format(name)}, 400
-
-        guitar = GuitarModel(name)
-
-        try:
-            guitar.save_to_db()
-        except:
-            return {"error_message": "An error occurred creating the guitar."}, 500
-
-        return guitar.json(), 201
 
     def delete(self, name):
         guitar = GuitarModel.find_by_name(name)
@@ -30,6 +24,19 @@ class Guitar(Resource):
             return {'success_message': 'Guitar deleted'}
         else:
             return {'error_message': 'error'}
+
+class GuitarCreate(Resource):
+    def post(self):
+        data = Guitar.parser.parse_args()
+
+        guitar = GuitarModel(data['name'])
+
+        try:
+            guitar.save_to_db()
+        except:
+            return {"error_message": "An error occurred creating the guitar."}, 500
+
+        return transport.json(), 201
 
 class GuitarList(Resource):
     def get(self,):
