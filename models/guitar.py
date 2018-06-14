@@ -1,6 +1,5 @@
 from db import db
 
-
 class GuitarModel(db.Model):
     __tablename__ = 'guitar'
 

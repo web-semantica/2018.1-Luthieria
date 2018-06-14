@@ -36,7 +36,7 @@ class GuitarCreate(Resource):
         except:
             return {"error_message": "An error occurred creating the guitar."}, 500
 
-        return transport.json(), 201
+        return guitar.json(), 201
 
 class GuitarList(Resource):
     def get(self,):
