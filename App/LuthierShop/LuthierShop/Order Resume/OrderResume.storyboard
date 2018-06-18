@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Event Detail View Controller-->
+        <scene sceneID="pGd-5Y-3IO">
+            <objects>
+                <viewController id="DsX-bu-5a8" customClass="EventDetailViewController" customModule="political_stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Chc-0O-A3O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="414-I6-Hdy">
+                                <rect key="frame" x="10" y="90.5" width="355" height="485"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-nn-Hwa">
+                                        <rect key="frame" x="0.0" y="426" width="355" height="59"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWe-MO-b6s">
+                                                <rect key="frame" x="10" y="10" width="335" height="39"/>
+                                                <color key="backgroundColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="OK">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dismissScreen:" destination="DsX-bu-5a8" eventType="touchUpInside" id="ArO-oK-3y0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="UWe-MO-b6s" secondAttribute="bottom" constant="10" id="4Pd-ug-v9T"/>
+                                            <constraint firstItem="UWe-MO-b6s" firstAttribute="top" secondItem="YyF-nn-Hwa" secondAttribute="top" constant="10" id="H7J-SD-qtc"/>
+                                            <constraint firstAttribute="trailing" secondItem="UWe-MO-b6s" secondAttribute="trailing" constant="10" id="Zrn-4C-po0"/>
+                                            <constraint firstItem="UWe-MO-b6s" firstAttribute="leading" secondItem="YyF-nn-Hwa" secondAttribute="leading" constant="10" id="kmf-v5-qd9"/>
+                                            <constraint firstAttribute="width" secondItem="YyF-nn-Hwa" secondAttribute="height" multiplier="6:1" id="ukt-l2-iWM"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IIK-ZH-V6n">
+                                        <rect key="frame" x="10" y="69" width="335" height="347"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modelo: Folk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgw-SV-CdS">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madeira Corpo: Spruce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atz-JC-HyL">
+                                                <rect key="frame" x="0.0" y="43.5" width="335" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madeira Tampo: Spruce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-Lw-8T1">
+                                                <rect key="frame" x="0.0" y="87" width="335" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madeira Braço: Spruce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgc-ZN-Jwp">
+                                                <rect key="frame" x="0.0" y="130" width="335" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modelo: Folk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-CV-Uso">
+                                                <rect key="frame" x="0.0" y="173.5" width="335" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madeira Braço: Spruce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksw-I9-JUS">
+                                                <rect key="frame" x="0.0" y="217" width="335" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madeira Tampo: Spruce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEb-yu-oH7">
+                                                <rect key="frame" x="0.0" y="260" width="335" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madeira Corpo: Spruce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-fB-KeI">
+                                                <rect key="frame" x="0.0" y="303.5" width="335" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aik-jI-EUd">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="59"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resumo do Instrumento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-AW-1Yg">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="58"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h56-op-YKD">
+                                                <rect key="frame" x="5" y="58" width="345" height="1"/>
+                                                <color key="backgroundColor" red="0.44705882349999998" green="0.73725490199999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="PMe-Ae-Hjo"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="h56-op-YKD" firstAttribute="leading" secondItem="Aik-jI-EUd" secondAttribute="leading" constant="5" id="FpC-gS-qOZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="h56-op-YKD" secondAttribute="trailing" constant="5" id="JnZ-ku-gSY"/>
+                                            <constraint firstItem="h56-op-YKD" firstAttribute="top" secondItem="p6t-AW-1Yg" secondAttribute="bottom" id="PSq-uV-6gP"/>
+                                            <constraint firstAttribute="bottom" secondItem="h56-op-YKD" secondAttribute="bottom" id="fhz-u8-h1L"/>
+                                            <constraint firstAttribute="trailing" secondItem="p6t-AW-1Yg" secondAttribute="trailing" id="i7b-9g-KxR"/>
+                                            <constraint firstItem="p6t-AW-1Yg" firstAttribute="leading" secondItem="Aik-jI-EUd" secondAttribute="leading" id="j3x-od-wXK"/>
+                                            <constraint firstItem="p6t-AW-1Yg" firstAttribute="top" secondItem="Aik-jI-EUd" secondAttribute="top" id="jGC-Gm-GgE"/>
+                                            <constraint firstAttribute="width" secondItem="Aik-jI-EUd" secondAttribute="height" multiplier="6:1" id="viM-yx-JYy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IIK-ZH-V6n" secondAttribute="trailing" constant="10" id="DX7-Og-IBD"/>
+                                    <constraint firstItem="Aik-jI-EUd" firstAttribute="leading" secondItem="414-I6-Hdy" secondAttribute="leading" id="HEv-x3-Otq"/>
+                                    <constraint firstAttribute="bottom" secondItem="YyF-nn-Hwa" secondAttribute="bottom" id="IPn-1l-4KT"/>
+                                    <constraint firstItem="YyF-nn-Hwa" firstAttribute="leading" secondItem="414-I6-Hdy" secondAttribute="leading" id="Jvq-QQ-ARM"/>
+                                    <constraint firstAttribute="trailing" secondItem="YyF-nn-Hwa" secondAttribute="trailing" id="NQ9-LL-7Db"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aik-jI-EUd" secondAttribute="trailing" id="Oe3-eJ-H9X"/>
+                                    <constraint firstItem="IIK-ZH-V6n" firstAttribute="leading" secondItem="414-I6-Hdy" secondAttribute="leading" constant="10" id="ahk-Qb-qt5"/>
+                                    <constraint firstItem="YyF-nn-Hwa" firstAttribute="top" secondItem="IIK-ZH-V6n" secondAttribute="bottom" constant="10" id="cAP-DW-ySS"/>
+                                    <constraint firstItem="IIK-ZH-V6n" firstAttribute="top" secondItem="Aik-jI-EUd" secondAttribute="bottom" constant="10" id="keg-VK-gpf"/>
+                                    <constraint firstItem="Aik-jI-EUd" firstAttribute="top" secondItem="414-I6-Hdy" secondAttribute="top" id="teN-rr-xho"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.50471402389999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vWX-Bg-FoD" firstAttribute="trailing" secondItem="414-I6-Hdy" secondAttribute="trailing" constant="10" id="1t0-mF-vcw"/>
+                            <constraint firstItem="414-I6-Hdy" firstAttribute="centerX" secondItem="Chc-0O-A3O" secondAttribute="centerX" id="GqW-wj-w6Y"/>
+                            <constraint firstItem="414-I6-Hdy" firstAttribute="centerY" secondItem="Chc-0O-A3O" secondAttribute="centerY" id="UQn-qZ-Gbj"/>
+                            <constraint firstItem="414-I6-Hdy" firstAttribute="leading" secondItem="vWX-Bg-FoD" secondAttribute="leading" constant="10" id="nKO-xr-pAc"/>
+                            <constraint firstItem="414-I6-Hdy" firstAttribute="height" secondItem="vWX-Bg-FoD" secondAttribute="height" multiplier="0.75" id="zqP-ef-N5d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vWX-Bg-FoD"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelEndTime" destination="atz-JC-HyL" id="5tc-Nx-rcc"/>
+                        <outlet property="labelEventAddress" destination="Ldx-Lw-8T1" id="UEr-Sf-WXm"/>
+                        <outlet property="labelEventOwner" destination="Pgc-ZN-Jwp" id="Fn8-ca-8CF"/>
+                        <outlet property="labelStartTime" destination="mgw-SV-CdS" id="FZN-Nc-0kv"/>
+                        <outlet property="lableEventTitle" destination="p6t-AW-1Yg" id="SrZ-Kj-b5e"/>
+                        <outlet property="okButton" destination="UWe-MO-b6s" id="kef-TP-Uqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tj-IQ-1zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3210" y="571"/>
+        </scene>
+    </scenes>
+</document>
