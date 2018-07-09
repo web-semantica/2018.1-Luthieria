@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OIo-FG-ECH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Generical View Controller-->
+        <scene sceneID="l3Y-KC-iGJ">
+            <objects>
+                <viewController id="OIo-FG-ECH" customClass="GenericalViewController" customModule="LuthierShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Urg-Kw-MzU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k17-Cc-VrV">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="genericalTableViewCell" rowHeight="120" id="BfC-sf-azp" customClass="GenericalTableViewCell" customModule="LuthierShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BfC-sf-azp" id="kLM-6D-hfG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAL-03-bcU">
+                                                    <rect key="frame" x="166.5" y="49.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VAL-03-bcU" firstAttribute="centerY" secondItem="kLM-6D-hfG" secondAttribute="centerY" id="4xd-Dx-YJt"/>
+                                                <constraint firstItem="VAL-03-bcU" firstAttribute="centerX" secondItem="kLM-6D-hfG" secondAttribute="centerX" id="8Le-n1-m4G"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelWoodType" destination="VAL-03-bcU" id="tjT-IK-COW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OIo-FG-ECH" id="dgq-KU-FwK"/>
+                                    <outlet property="delegate" destination="OIo-FG-ECH" id="3R8-MZ-632"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ox0-DK-1fV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynm-wp-0Ir">
+                                        <rect key="frame" x="94" y="18.5" width="187.5" height="37.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <color key="tintColor" red="0.44705882349999998" green="0.73725490199999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Resumo do Instrumento"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="orderResume:" destination="OIo-FG-ECH" eventType="touchUpInside" id="qST-aH-FA9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44705882349999998" green="0.73725490199999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ynm-wp-0Ir" firstAttribute="width" secondItem="ynm-wp-0Ir" secondAttribute="height" multiplier="10:2" id="Wiu-J9-JZU"/>
+                                    <constraint firstItem="ynm-wp-0Ir" firstAttribute="width" secondItem="ox0-DK-1fV" secondAttribute="width" multiplier="1/2" id="X57-n0-zyS"/>
+                                    <constraint firstItem="ynm-wp-0Ir" firstAttribute="centerY" secondItem="ox0-DK-1fV" secondAttribute="centerY" id="k4i-Eo-NfS"/>
+                                    <constraint firstItem="ynm-wp-0Ir" firstAttribute="centerX" secondItem="ox0-DK-1fV" secondAttribute="centerX" id="puw-FK-Iu6"/>
+                                    <constraint firstAttribute="width" secondItem="ox0-DK-1fV" secondAttribute="height" multiplier="5:1" id="ubq-5D-nly"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k17-Cc-VrV" firstAttribute="leading" secondItem="wml-Qv-dTR" secondAttribute="leading" id="AY0-jH-pCT"/>
+                            <constraint firstItem="ox0-DK-1fV" firstAttribute="top" secondItem="wml-Qv-dTR" secondAttribute="top" id="KCF-mH-4G4"/>
+                            <constraint firstItem="wml-Qv-dTR" firstAttribute="trailing" secondItem="ox0-DK-1fV" secondAttribute="trailing" id="RSV-VW-Dm4"/>
+                            <constraint firstItem="k17-Cc-VrV" firstAttribute="trailing" secondItem="wml-Qv-dTR" secondAttribute="trailing" id="TBu-hX-nTx"/>
+                            <constraint firstItem="k17-Cc-VrV" firstAttribute="leading" secondItem="wml-Qv-dTR" secondAttribute="leading" id="ceg-XL-F2M"/>
+                            <constraint firstItem="k17-Cc-VrV" firstAttribute="top" secondItem="ox0-DK-1fV" secondAttribute="bottom" id="gyP-mV-Izl"/>
+                            <constraint firstItem="k17-Cc-VrV" firstAttribute="bottom" secondItem="wml-Qv-dTR" secondAttribute="bottom" id="heT-IT-HkD"/>
+                            <constraint firstItem="ox0-DK-1fV" firstAttribute="leading" secondItem="wml-Qv-dTR" secondAttribute="leading" id="kTY-hh-m92"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wml-Qv-dTR"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="k17-Cc-VrV" id="pVh-g2-kyX"/>
+                        <segue destination="dI0-2d-NUI" kind="presentation" identifier="callOrderResume" modalPresentationStyle="overCurrentContext" id="uc1-dt-AOv"/>
+                        <segue destination="FIV-J3-Y7l" kind="show" identifier="callCreateOrder" id="1eJ-hR-C5a"/>
+                        <segue destination="000-do-3YD" kind="show" identifier="callNextStep" id="CPu-fD-9Bv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GvW-QA-ckH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-514.39999999999998" y="-59.820089955022496"/>
+        </scene>
+        <!--GenericalView-->
+        <scene sceneID="D0O-q2-Hnx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GenericalView" id="000-do-3YD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDu-m5-DGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="-60"/>
+        </scene>
+        <!--CreateOrder-->
+        <scene sceneID="iNK-3y-yp2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateOrder" id="FIV-J3-Y7l" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXn-70-RoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="-166"/>
+        </scene>
+        <!--OrderResume-->
+        <scene sceneID="TVI-B6-iH1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OrderResume" id="dI0-2d-NUI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATN-IO-y8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="43"/>
+        </scene>
+    </scenes>
+</document>

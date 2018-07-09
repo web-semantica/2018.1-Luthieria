@@ -72,11 +72,20 @@
                     <navigationItem key="navigationItem" id="KWb-iC-qlC"/>
                     <connections>
                         <outlet property="tableView" destination="LCO-J6-kKn" id="CUt-bk-LKI"/>
+                        <segue destination="cTq-gV-Wci" kind="show" identifier="callGenerical" id="eO6-RG-JjC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQU-lh-fuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2020" y="-618.44077961019491"/>
+        </scene>
+        <!--GenericalView-->
+        <scene sceneID="8e3-KE-dgc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GenericalView" id="cTq-gV-Wci" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jj1-0F-jA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1351" y="-619"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9iv-EL-GqA">

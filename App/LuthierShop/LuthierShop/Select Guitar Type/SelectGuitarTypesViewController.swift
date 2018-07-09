@@ -10,13 +10,35 @@ import UIKit
 
 class SelectGuitarTypesViewController: UIViewController {
     
-    let guitarTypes = ["Classico", "Folk", "Jumbo"]
+    var guitarTypes = [String]()
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        
+        RequestApi.getDataByTriple(subject: ApiConstants.addUrlPrefix(string: "Violao"), predicate: ApiConstants.addUrlPrefix(string: "tem_tipo")) { (response) in
+            
+            if let dict = response.value as? [String:Any] {
+                
+                if let results = dict["results"] as? [String:Any] {
+                    print(results)
+                    if let bindings = results["bindings"] as? [[String:Any]] {
+                        
+                        
+                        for binding in bindings {
+                            if let ojectNotParsed = binding["o"] as? [String:Any] {
+                                
+                                guard let objectString = ojectNotParsed["value"] as? String else { return }
+                                self.guitarTypes.append(objectString.deletingPrefix("http://virtuoso.economiaxp.com/DAV/home/guitar/"))
+                            }
+                        }
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,8 +51,10 @@ extension SelectGuitarTypesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let guitarTypeName = guitarTypes[safe: indexPath.row] {
-            guard let instrumentType = GuitarBodyType(rawValue: guitarTypeName) else { return }
-            Instrument.sharedInstance.model = instrumentType
+            Instrument.sharedInstance.type = guitarTypeName
+            Instrument.sharedInstance.steps[0].value = guitarTypeName
+            Instrument.sharedInstance.advanceStep()
+            performSegue(withIdentifier: "callGenerical", sender: self)
         }
     }
 }

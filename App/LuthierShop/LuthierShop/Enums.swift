@@ -9,5 +9,5 @@
 import UIKit
 
 enum GuitarBodyType: String {
-    case jumbo = "Jumbo", cutway = "Classico", dreadnought = "Folk"
+    case jumbo = "Jumbo", cutway = "Tradicional", dreadnought = "Folk"
 }

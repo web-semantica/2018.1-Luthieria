@@ -34,7 +34,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" red="0.44705882349999998" green="0.73725490199999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Começar"/>
+                                <state key="normal" title="Criar Pedido"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -44,13 +44,29 @@
                                     <segue destination="qJu-5v-sEE" kind="show" id="HCV-mm-MFe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNH-u7-lWP">
+                                <rect key="frame" x="93" y="512.5" width="187.5" height="52"/>
+                                <color key="backgroundColor" red="0.1108123437" green="0.3704121709" blue="0.44852453469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Listar Pedidos"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.44705882349999998" green="0.73725490199999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yqc-1v-Uow" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="02F-wo-2Rm"/>
+                            <constraint firstItem="ZNH-u7-lWP" firstAttribute="width" secondItem="Q7r-CQ-Q8C" secondAttribute="width" id="52z-rI-rYp"/>
                             <constraint firstItem="Yqc-1v-Uow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UMf-Y0-gZf"/>
+                            <constraint firstItem="ZNH-u7-lWP" firstAttribute="centerX" secondItem="Q7r-CQ-Q8C" secondAttribute="centerX" id="Wm4-eU-5fu"/>
+                            <constraint firstItem="ZNH-u7-lWP" firstAttribute="top" secondItem="Q7r-CQ-Q8C" secondAttribute="bottom" constant="20" id="YZT-b4-clf"/>
                             <constraint firstItem="Q7r-CQ-Q8C" firstAttribute="width" secondItem="Yqc-1v-Uow" secondAttribute="width" id="a37-Ih-Kuo"/>
                             <constraint firstItem="Yqc-1v-Uow" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/1.25" id="eon-ru-ntx"/>
+                            <constraint firstItem="ZNH-u7-lWP" firstAttribute="height" secondItem="Q7r-CQ-Q8C" secondAttribute="height" id="lw3-2b-FfD"/>
                             <constraint firstItem="Q7r-CQ-Q8C" firstAttribute="top" secondItem="Yqc-1v-Uow" secondAttribute="bottom" constant="80" id="w1Y-Na-iAa"/>
                             <constraint firstItem="Q7r-CQ-Q8C" firstAttribute="centerX" secondItem="Yqc-1v-Uow" secondAttribute="centerX" id="xgi-Sw-kri"/>
                         </constraints>
